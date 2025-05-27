@@ -431,7 +431,7 @@ find / -perm -4000 2>/dev/null
     
     - pkexec có quyền SUID-root, cho phép bất kỳ người dùng nào thực thi với quyền root.
 
-![Screenshot 2025-05-27 111209](image/55.png)
+![Screenshot 2025-05-27 111209](image/5.png)
 
 
 #### **Bước 3: Kiểm tra phiên bản pkexec**
