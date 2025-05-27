@@ -288,7 +288,7 @@ Kẻ tấn công có thể thực hiện các hành động quản trị trên h
 
 JBoss mặc định expose trang `Administrator Console` và sử dụng tài khoản mặc định `admin:admin` để truy cập.
 
-![Screenshot 2025-05-27 110902](https://github.com/user-attachments/assets/80f09b11-865f-4071-a9b4-a115692b90aa)
+[![Screenshot 2025-05-27 110902](https://github.com/user-attachments/assets/80f09b11-865f-4071-a9b4-a115692b90aa)](https://github.com/tranphuc2005/leoquyen_linux/blob/main/image/1.png)
 
 
 Khi đã đăng nhập và truy cập thành công, attacker hoàn toàn chiếm quyền sở hữu của admin với đầy đủ phương thức để RCE. Ở đây mình sẽ demo RCE thông qua việc upload webshell.
