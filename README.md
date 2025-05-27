@@ -288,7 +288,7 @@ Kẻ tấn công có thể thực hiện các hành động quản trị trên h
 
 JBoss mặc định expose trang `Administrator Console` và sử dụng tài khoản mặc định `admin:admin` để truy cập.
 
-[[![Screenshot 2025-05-27 110902](https://github.com/user-attachments/assets/80f09b11-865f-4071-a9b4-a115692b90aa)](https://github.com/tranphuc2005/leoquyen_linux/blob/main/image/1.png)](https://github.com/tranphuc2005/leoquyen_linux/blob/main/image/1.png)
+[![Screenshot 2025-05-27 110902](image/1.png)
 
 
 Khi đã đăng nhập và truy cập thành công, attacker hoàn toàn chiếm quyền sở hữu của admin với đầy đủ phương thức để RCE. Ở đây mình sẽ demo RCE thông qua việc upload webshell.
@@ -392,11 +392,11 @@ Bạn sẽ thấy tệp `shell.war` trong thư mục hiện tại.
 
 **Thực hiện tải lên**
 
-![Screenshot 2025-05-27 111021](https://github.com/user-attachments/assets/7e262316-48fe-4b7a-a829-bf836587fe49)
+![Screenshot 2025-05-27 111021](image/2.png)
 
 Thực hiện truy cập `http://<IP:PORT>/shell/shell.jsp` để vào webshell và thực thi RCE.
 
-![Screenshot 2025-05-27 111042](https://github.com/user-attachments/assets/9df18d26-6ef3-49c7-8e7a-8e7920764d85)
+![Screenshot 2025-05-27 111042](image/3.png)
 
 ## 4. Tìm và khai thác các lỗ hổng leo quyền root trên máy chủ CentOS
 
@@ -421,7 +421,7 @@ find / -perm -4000 2>/dev/null
     
 - pkexec là một phần của Polkit, cho phép thực thi các lệnh với quyền của người dùng khác (tương tự như sudo). Việc pkexec có quyền SUID-root là một lỗ hổng nghiêm trọng.
 
-![Screenshot 2025-05-27 111142](https://github.com/user-attachments/assets/373b5241-49b9-47f4-9416-e0ac89436f2f)
+![Screenshot 2025-05-27 111142](image/4.png)
   
 #### **Bước 2: Kiểm tra quyền của pkexec**
 
@@ -431,7 +431,7 @@ find / -perm -4000 2>/dev/null
     
     - pkexec có quyền SUID-root, cho phép bất kỳ người dùng nào thực thi với quyền root.
 
-![Screenshot 2025-05-27 111209](https://github.com/user-attachments/assets/64fcba5b-a47b-4e49-b5d6-4a87ab8a1772)
+![Screenshot 2025-05-27 111209](image/55.png)
 
 
 #### **Bước 3: Kiểm tra phiên bản pkexec**
@@ -536,7 +536,7 @@ int main()
 
 - Sau khi chạy khai thác, người dùng đã có được một shell root
 
-![Screenshot 2025-05-27 111319](https://github.com/user-attachments/assets/c252a895-2c9a-4bf4-9626-be741c6b1242)
+![Screenshot 2025-05-27 111319](image/6.png)
 
 
 ## 5. Cập nhật CentOS lên bản mới nhất và hướng dẫn fix lỗ hổng JBoss
